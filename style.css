@@ -1,0 +1,97 @@
+@font-face {
+  font-family: 'HANBatang';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/HANBatang.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'HANBatang';
+}
+
+.memo-form {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(./img/bg1.jpg);
+}
+
+input {
+  display: block;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+textarea {
+  display: block;
+  height: 300px;
+  margin-bottom: 10px;
+}
+
+button {
+  display: block;
+  height: 30px;
+}
+
+#display::-webkit-scrollbar {
+  background: none;
+}
+
+#display::-webkit-scrollbar-thumb {
+  width: 3px;
+  background-color: #8a87a9;
+  border-radius: 10px;
+}
+
+.memo-wrapper {
+  max-width: 340px;
+  flex-grow: 1;
+  padding: 15px;
+  border-radius: 10px;
+  background-image: url(./img/bg1.jpg);
+  color: #e0dfea;
+  background-size: cover;
+  background-position: 0 0;
+  transition: 0.3s;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  display: grid;
+  grid-template-areas:
+    'a a c'
+    'b b c'
+    'd d d'
+    'e e e';
+}
+
+.memo-header p {
+  grid-area: a;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.memo-header h2 {
+  grid-area: b;
+  margin-bottom: 10px;
+}
+
+.memo-wrapper h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.memo-datetime {
+  grid-area: c;
+  text-align: right;
+}
+
+.memo-date {
+  font-size: 18px;
+}
+
+.memo-content {
+  grid-area: d;
+}
+
+.memo-wrapper button {
+  grid-area: e;
+  justify-self: flex-end;
+}

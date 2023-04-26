@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUITE/fonts/static/woff2/SUITE.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="text-sm">
+    <header class="mt-20 h-[50px] flex justify-center align-center">
+        <h1 class="text-3xl font-bold text-center text-xl">MY MEMO</h1>
+    </header>
+    <main class="bg-[#e9eaff] flex justify-center border h-[700px] p-10 m-auto  border-red gap-10">
+        <section class="wrapper w-3/5 rounded-xl bg-white shadow-3xl p-5 grow-1 text-ftColor w-[550px]">
+
+            <form
+                class="memo-form rounded-xl border border-ftColor p-5 pb-7 flex flex-col justify-center gap-3 shadow-2xl ">
+                <h2 class="text-center"><strong id="index" class="italic text-4xl">3</strong> 번째
+                </h2>
+                <p class="text-center mb-5"><span id="memo-month" class="memo-month italic font-bold text-2xl">1</span>
+                    월
+                    <span id="memo-date" class=" italic font-bold text-2xl">1</span> 일의 기록
+                </p>
+                <input
+                    class="text-center mx-auto  pb-2 h-9 w-[300px] border-b-[2px] bg-transparent focus:outline-none placeholder:italic placeholder:text-[#e9eaff]"
+                    type="text" name="" id="title" required placeholder="오늘 하루, 제목 한 줄">
+                <textarea
+                    class="p-5 border bg-transparent h-[300px] rounded-xl placeholder:italic placeholder:text-[#e9eaff] resize-none focus:outline-none"
+                    name="" id="content" cols="30" rows="10" placeholder="당신의 오늘은 어떤 하루였나요?"></textarea>
+                <button
+                    class="inline-block m-auto rounded-xl border bg-transparent w-full hover:bg-opacity-25 hover:bg-gray-100"
+                    onclick="saveNote()">
+                    m e m o
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-vector-pen inline-block" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M10.646.646a.5.5 0 0 1 .708 0l4 4a.5.5 0 0 1 0 .708l-1.902 1.902-.829 3.313a1.5 1.5 0 0 1-1.024 1.073L1.254 14.746 4.358 4.4A1.5 1.5 0 0 1 5.43 3.377l3.313-.828L10.646.646zm-1.8 2.908-3.173.793a.5.5 0 0 0-.358.342l-2.57 8.565 8.567-2.57a.5.5 0 0 0 .34-.357l.794-3.174-3.6-3.6z" />
+                        <path fill-rule="evenodd" d="M2.832 13.228 8 9a1 1 0 1 0-1-1l-4.228 5.168-.026.086.086-.026z" />
+                    </svg>
+                </button>
+            </form>
+
+        </section>
+        <section
+            class="w-[740px] h-pull bg-white shadow-2xl rounded-xl p-5 flex flex-wrap gap-3 text-ftColor overflow-y-scroll"
+            id="display"></section>
+    </main>
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./app.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgColor: '#f2e9fa',
+                        ftColor: '#e9eaff'
+                    }
+                }
+            }
+        }
+
+        module.exports = {
+            theme: {
+                extend: {
+                    backgroundImage: {
+                        'hero-pattern': "url('/img/hero-pattern.svg')",
+                        'footer-texture': "url('/img/footer-texture.png')",
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
