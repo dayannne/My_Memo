@@ -45,7 +45,7 @@ button {
 }
 
 .memo-wrapper {
-  max-width: 330px;
+  max-width: 100%;
   flex-grow: 1;
   padding: 15px;
   border-radius: 10px;
@@ -96,4 +96,14 @@ button {
 .memo-wrapper button {
   grid-area: e;
   justify-self: flex-end;
+  align-self: flex-end;
+}
+
+@media (max-width: 1028px) {
+  main {
+    flex-direction: column;
+    height: 100%;
+
+    align-items: center;
+  }
 }
