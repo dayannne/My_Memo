@@ -34,17 +34,18 @@ button {
 }
 
 #display::-webkit-scrollbar {
-  background: none;
+  background: #f1f0ff;
+  border-radius: 0 10px 10px 0;
+  width: 10px;
 }
 
 #display::-webkit-scrollbar-thumb {
-  width: 3px;
   background-color: #8a87a9;
   border-radius: 10px;
 }
 
 .memo-wrapper {
-  max-width: 340px;
+  max-width: 330px;
   flex-grow: 1;
   padding: 15px;
   border-radius: 10px;
@@ -56,10 +57,10 @@ button {
   box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   display: grid;
   grid-template-areas:
-    'a a c'
-    'b b c'
-    'd d d'
-    'e e e';
+    'a c'
+    'b c'
+    'd d'
+    'e e';
 }
 
 .memo-header p {
@@ -84,10 +85,11 @@ button {
 }
 
 .memo-date {
-  font-size: 18px;
+  font-size: 17px;
 }
 
 .memo-content {
+  word-break: break-all;
   grid-area: d;
 }
 
